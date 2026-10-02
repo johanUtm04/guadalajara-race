@@ -1,5 +1,5 @@
 //Kind of data thatthe race expects to receive 
-export type DistanceCategory = '5K' | '10';
+export type DistanceCategory = '5K' | '10K';
 export type GenderCategory = 'Varonil' | 'Femenil' | 'General';
 
 export interface RegistrationInfo {
