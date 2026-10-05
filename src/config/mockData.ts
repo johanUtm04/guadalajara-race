@@ -204,3 +204,58 @@ export const MOCK_PRIZES_DATA: PrizesAndRaffleData = {
     },
   ],
 };
+
+export interface SponsorsSectionData {
+  title: string;
+  subtitle: string;
+  benefitLabels: { key: string; label: string }[];
+  tiers: {
+    id: string;
+    name: string;
+    price: string;
+    color?: string;
+    highlighted?: boolean;
+    courtesyInscriptions?: string;
+    benefits: string[];
+  }[];
+}
+
+export const MOCK_SPONSORS_DATA: SponsorsSectionData = {
+  title: 'Paquetes de Patrocinadores',
+  subtitle: 'Forma parte de la 3ª Carrera Con Causa Cruz Azul Guadalajara 2026',
+  benefitLabels: [
+    { key: 'principal', label: 'Presencia como Patrocinador Principal' },
+    { key: 'stand', label: 'Espacio preferencial para stand' },
+    { key: 'materials', label: 'Presencia en materiales impresos y digitales' },
+    { key: 'screens', label: 'Presencia en pantallas durante el evento' },
+    { key: 'shirt', label: 'Logo en playera oficial del evento' },
+    { key: 'socials', label: 'Mención en redes sociales y comunicados oficiales' },
+  ],
+  tiers: [
+    {
+      id: 'platino',
+      name: 'Patrocinador Platino',
+      price: '$200,000',
+      color: '#dc2626',
+      highlighted: true,
+      courtesyInscriptions: '10 Inscripciones',
+      benefits: ['principal', 'stand', 'materials', 'screens', 'shirt', 'socials'],
+    },
+    {
+      id: 'oro',
+      name: 'Patrocinador Oro',
+      price: '$100,000',
+      color: '#0284c7',
+      courtesyInscriptions: '5 Inscripciones',
+      benefits: ['stand', 'materials', 'screens', 'shirt'],
+    },
+    {
+      id: 'plata',
+      name: 'Patrocinador Plata',
+      price: '$50,000',
+      color: '#1e3a8a',
+      courtesyInscriptions: '5 Inscripciones',
+      benefits: ['materials', 'screens', 'socials'],
+    },
+  ],
+};
