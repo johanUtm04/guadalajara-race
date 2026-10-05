@@ -97,3 +97,40 @@ export const MOCK_SPONSORS: SponsorTier[] = [
     ],
   },
 ]
+
+export interface ParkingOption {
+  id: string;
+  name: string;
+  capacity: string;
+  accessNote: string;
+  mapUrl: string;
+}
+
+export interface LocationInfo {
+  venueName: string;
+  address: string;
+  mapEmbedUrl: string;
+  parkings: ParkingOption[];
+}
+
+export const MOCK_LOCATION_DATA: LocationInfo = {
+  venueName: 'Torres Amarillas (Parque Metropolitano)',
+  address: 'Zapopan, Jalisco, México',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.846501234567!2d-103.435!3d20.675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQwJzMwLjAiTiAxMDPCsDI2JzA2LjAiVw!5e0!3m2!1ses!2smx!4v1600000000000!5m2!1ses!2smx',
+  parkings: [
+    {
+      id: 'parking-1',
+      name: 'Estacionamiento 1 - Entrada Principal',
+      capacity: '300 cajones',
+      accessNote: 'Acceso por Av. Vallarta. Se sugiere llegar antes de las 6:30 AM.',
+      mapUrl: 'https://maps.google.com/?q=Estacionamiento+1+Torres+Amarillas',
+    },
+    {
+      id: 'parking-2',
+      name: 'Estacionamiento 2 - Alterno',
+      capacity: '200 cajones',
+      accessNote: 'Acceso por Av. Periférico. Recomendado para flujo de salida rápido.',
+      mapUrl: 'https://maps.google.com/?q=Estacionamiento+2+Torres+Amarillas',
+    },
+  ],
+};
