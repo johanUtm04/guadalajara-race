@@ -157,3 +157,50 @@ export const MOCK_SOCIAL_CAUSE_DATA: SocialCauseData = {
     'Ropa, cobijas y textiles en buen estado',
   ],
 };
+
+export interface AwardPrize {
+  place: string;
+  item: string;
+  badge: string;
+}
+
+export interface RaffleCategory {
+  title: string;
+  description: string;
+  items: string[];
+}
+
+export interface PrizesAndRaffleData {
+  title: string;
+  subtitle: string;
+  awards: AwardPrize[];
+  raffleTitle: string;
+  raffleTotalAmount: string;
+  raffleSubtitle: string;
+  raffleCategories: RaffleCategory[];
+}
+
+export const MOCK_PRIZES_DATA: PrizesAndRaffleData = {
+  title: 'Premiación a Ganadores',
+  subtitle: 'Grandes premios para los primeros lugares de la competencia',
+  awards: [
+    { place: '1er Lugar', item: 'Motocicleta', badge: 'Oro' },
+    { place: '2do Lugar', item: 'Scooter Eléctrico', badge: 'Plata' },
+    { place: '3er Lugar', item: 'Pantalla Smart TV', badge: 'Bronce' },
+  ],
+  raffleTitle: 'Gran Rifa para Asistentes',
+  raffleTotalAmount: 'Más de $20,000 MXN',
+  raffleSubtitle: 'Todos los números inscritos participan en el sorteo al finalizar la carrera',
+  raffleCategories: [
+    {
+      title: 'Electrodomésticos',
+      description: 'Equipa tu hogar con los mejores aparatos',
+      items: ['Hornos de microondas', 'Freidoras de aire', 'Planchas', 'Y mucho más...'],
+    },
+    {
+      title: 'Herramientas',
+      description: 'Kits y herramientas de uso rudo',
+      items: ['Taladros inalámbricos', 'Cajas de herramientas', 'Juegos de llaves y desarmadores'],
+    },
+  ],
+};

@@ -4,6 +4,7 @@ import { EventOverview } from "./components/ui/EventOverview";
 import { RunnerKit } from "./components/RunnerKit/RunnerKit";
 import { LocationSection } from "./components/LocationSection/LocationSection";
 import { SocialCauseSection } from "./components/SocialCauseSection/SocialCauseSection";
+import { PrizesSection } from "./components/PrizesSection/PrizesSection";
 import './App.css';
 
 export function App() {
@@ -15,6 +16,7 @@ export function App() {
       <RunnerKit />
       <LocationSection />
       <SocialCauseSection />
+      <PrizesSection />
       <main className="main-content">
         <h2>Bienvenido a la 3ª Carrera Cruz Azul Guadalajara 2026</h2>
         <p>Selecciona una sección en la navegación superior para explorar los detalles del evento.</p>
