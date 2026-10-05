@@ -1,0 +1,117 @@
+/* src/componets/ui/css/Hero.module.css */
+.heroSection {
+  background-color: var(--color-primary-navy, #152259);
+  color: var(--color-text-light, #ffffff);
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.heroTitle {
+  font-family: var(--font-heading, 'Impact', sans-serif);
+  font-size: 3.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.countdownContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.timeBox {
+  background-color: var(--color-card-dark, #1e2c6d);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-card, 16px);
+  padding: 1.25rem 1rem;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-card, 0 10px 25px -5px rgba(0, 0, 0, 0.1));
+}
+
+.timeValue {
+  font-family: var(--font-heading, 'Impact', sans-serif);
+  font-size: 2.8rem;
+  line-height: 1;
+  color: var(--color-text-light, #ffffff);
+}
+
+.timeLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.heroCta {
+  margin-top: 1rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--color-accent-red, #e31b23);
+  color: var(--color-text-light, #ffffff);
+  font-family: var(--font-heading, 'Impact', sans-serif);
+  font-size: 1.2rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: var(--radius-btn, 6px);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #c8131a;
+  transform: translateY(-2px);
+}
+
+.countdownExpired {
+  font-family: var(--font-heading, 'Impact', sans-serif);
+  font-size: 1.8rem;
+  color: var(--color-accent-red, #e31b23);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .countdownContainer {
+    gap: 0.75rem;
+  }
+
+  .timeBox {
+    min-width: 75px;
+    padding: 0.85rem 0.5rem;
+  }
+
+  .timeValue {
+    font-size: 2rem;
+  }
+}

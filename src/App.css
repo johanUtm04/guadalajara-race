@@ -25,11 +25,16 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, .section-title {
@@ -38,6 +43,7 @@ h1, h2, h3, .section-title {
   letter-spacing: 0.4px;
 }
 
+/* Shared Section Utilities */
 .section-title {
   font-size: 2.5rem;
   text-align: center;
@@ -49,151 +55,9 @@ h1, h2, h3, .section-title {
   color: var(--color-text-light);
 }
 
-/* ==========================================================================
-   HEADER & NAVIGATION
-   ========================================================================== */
-.app-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--color-dark-navy);
-  border-bottom: 3px solid var(--color-accent-red);
-  padding: 1rem 3rem;
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-section h1 {
-  color: var(--color-text-light);
-  font-size: 1.5rem;
-  line-height: 1.0;
-}
-
-.logo-badge {
-  color: #a5b4fc;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  display: block;
-  margin-bottom: 2px;
-}
-
-.logo-title {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 900;
-  margin: 0;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-.hamburger-btn {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1001;
-}
-
-.hamburger-btn .bar {
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger-btn .bar.open:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.hamburger-btn .bar.open:nth-child(2) {
-  opacity: 0;
-}
-.hamburger-btn .bar.open:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-.main-nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.main-nav a {
-  color: var(--color-text-light);
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: opacity 0.2s ease;
-}
-
-.main-nav a:hover {
-  opacity: 0.8;
-}
-
-.cta-button {
-  background-color: var(--color-accent-red, #e31b23);
-  color: #ffffff !important;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.85rem;
-  transition: background-color 0.2s ease;
-}
-
-.cta-button:hover {
-  background-color: #c8131a;
-  color: #ffffff;
-}
-
-/* ==========================================================================
-   HERO / BANNER SECTION
-   ========================================================================== */
-.hero-section {
-  background-color: var(--color-primary-navy);
-  color: var(--color-text-light);
-  padding: 5rem 2rem;
-}
-
-.hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-}
-
-.hero-title {
-  font-size: 4rem;
-  line-height: 0.95;
-  margin-bottom: 1.5rem;
-}
-
-.hero-details p {
-  font-size: 1.1rem;
-  color: #cbd5e1;
-  margin-bottom: 0.5rem;
-}
-
+/* Base button fallbacks */
 .btn-primary {
   display: inline-block;
-  margin-top: 2rem;
   background-color: var(--color-accent-red);
   color: var(--color-text-light);
   padding: 0.8rem 2.5rem;
@@ -210,197 +74,4 @@ h1, h2, h3, .section-title {
 .btn-primary:hover {
   background-color: #c8131a;
   transform: translateY(-2px);
-}
-
-.hero-preview-card {
-  position: relative;
-  background-color: var(--color-card-dark);
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-}
-
-.hero-preview-card img {
-  width: 100%;
-  display: block;
-}
-
-.sold-out-ribbon {
-  position: absolute;
-  bottom: 15%;
-  left: -10%;
-  right: -10%;
-  background-color: var(--color-accent-red);
-  color: var(--color-text-light);
-  text-align: center;
-  padding: 0.8rem 0;
-  transform: rotate(-6deg);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.sold-out-ribbon h3 {
-  font-size: 1.8rem;
-  margin: 0;
-}
-
-/* ==========================================================================
-   SPONSORS / LOGO GRID
-   ========================================================================== */
-.sponsors-section {
-  background-color: #ffffff;
-  padding: 3rem 2rem;
-}
-
-.sponsors-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 2.5rem;
-  align-items: center;
-  justify-items: center;
-}
-
-.sponsors-grid img {
-  max-width: 140px;
-  max-height: 60px;
-  object-fit: contain;
-}
-
-/* ==========================================================================
-   CONVOCATORIA / DATA CARDS
-   ========================================================================== */
-.convocatoria-section {
-  padding: 4rem 2rem;
-}
-
-.cards-grid-2col {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.data-card {
-  background-color: var(--color-card-light);
-  border-radius: var(--radius-card);
-  padding: 2.5rem;
-  box-shadow: var(--shadow-card);
-}
-
-.data-card h3 {
-  color: var(--color-primary-navy);
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.data-card ul {
-  list-style: none;
-}
-
-.data-card li {
-  margin-bottom: 0.8rem;
-  font-size: 0.95rem;
-  color: var(--color-text-dark);
-}
-
-.data-card li strong {
-  color: var(--color-primary-navy);
-}
-
-.data-card li::before {
-  content: "- ";
-  color: var(--color-accent-red);
-  font-weight: bold;
-}
-
-/* ==========================================================================
-   DARK SECTION CARDS (Rifa Celeste, Kit Corredor, Ruta)
-   ========================================================================== */
-.dark-section {
-  background-color: var(--color-primary-navy);
-  color: var(--color-text-light);
-  padding: 4rem 2rem;
-}
-
-.dark-card {
-  background-color: var(--color-card-dark);
-  border-radius: var(--radius-card);
-  padding: 2.5rem;
-}
-
-.dark-card ul {
-  list-style: none;
-}
-
-.dark-card li {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.dark-card li::before {
-  content: "✓";
-  color: var(--color-accent-red);
-  font-weight: bold;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hero-container,
-  .cards-grid-2col {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-title {
-    font-size: 2.8rem;
-  }
-
-  .hamburger-btn {
-    display: flex;
-  }
-  
-  .main-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background-color: #0d1b3e;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-    padding: 5rem 2rem 2rem 2rem;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-  }
-
-.main-nav.active {
-    right: 0;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-
-  .main-nav a {
-    font-size: 1.1rem;
-    display: block;
-    width: 100%;
-  }
-
-  .nav-cta-item {
-    margin-top: 1rem;
-    width: 100%;
-  }
-
-  .nav-cta-item .cta-button {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
 }
