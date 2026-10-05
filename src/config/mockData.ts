@@ -134,3 +134,26 @@ export const MOCK_LOCATION_DATA: LocationInfo = {
     },
   ],
 };
+
+export interface SocialCauseData {
+  title: string;
+  organization: string;
+  locationUrl: string;
+  description: string;
+  impactMessage: string;
+  itemsNeeded: string[];
+}
+
+export const MOCK_SOCIAL_CAUSE_DATA: SocialCauseData = {
+  title: 'Cuota de Inscripción',
+  organization: 'CASA HOGAR ESCALAR',
+  locationUrl: 'https://maps.app.goo.gl/mEPmvVNCLEjvloGg8',
+  description: 'La cuota de inscripción a la carrera es un donativo en especie. Apoyamos a las niñas, niños y jóvenes de Casa Hogar Escalar con productos y artículos de primera necesidad.',
+  impactMessage: 'Tu apoyo hace la diferencia. Entrega tu donativo en especie el día del evento o durante la recogida de kits.',
+  itemsNeeded: [
+    'Abarrotes y alimentos no perecederos (aceite, avena, pasta, enlatados)',
+    'Artículos de higiene personal y limpieza (jabón, papel, desinfectante)',
+    'Medicamentos básicos de botiquín (analgésicos, curación)',
+    'Ropa, cobijas y textiles en buen estado',
+  ],
+};

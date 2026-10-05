@@ -1,0 +1,146 @@
+.section {
+  padding: 4rem 1.5rem;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fef2f2;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid #fecaca;
+  margin-bottom: 0.75rem;
+}
+
+.heartIcon {
+  fill: #dc2626;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #334155;
+  margin-top: 0.5rem;
+}
+
+.locationLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.locationLink:hover {
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.callout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.925rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.calloutIcon {
+  flex-shrink: 0;
+  color: #2563eb;
+}
+
+.itemsBlock {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.itemsHeading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .itemsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.itemCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  background: #ffffff;
+  padding: 0.875rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.checkIcon {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
