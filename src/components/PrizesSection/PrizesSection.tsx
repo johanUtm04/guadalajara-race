@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Tv, Bike, Zap, Wrench, Tv2, Gift } from 'lucide-react';
+import { Tv, Bike, Zap, Wrench, Gift } from 'lucide-react';
 import { MOCK_PRIZES_DATA } from '../../config/mockData';
 import styles from './PrizesSection.module.css';
 
