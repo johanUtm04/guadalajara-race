@@ -19,10 +19,10 @@ export function App() {
       <SocialCauseSection />
       <PrizesSection />
       <SponsorsTable />
-      <main className="main-content">
+      {/* <main className="main-content">
         <h2>Bienvenido a la 3ª Carrera Cruz Azul Guadalajara 2026</h2>
         <p>Selecciona una sección en la navegación superior para explorar los detalles del evento.</p>
-      </main>
+      </main> */}
     </div>
   );
 }
