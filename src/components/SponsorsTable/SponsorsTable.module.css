@@ -1,0 +1,130 @@
+.section {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+  background: #ffffff;
+}
+
+.benefitColumnHeader {
+  width: 35%;
+  text-align: left;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  background-color: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tierHeader {
+  width: 21.6%;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.highlightedTier {
+  background-color: #dc2626;
+}
+
+.tierName {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.tierPrice {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+
+.benefitLabel {
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.cell {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.highlightedCell {
+  background-color: #fef2f2;
+}
+
+.checkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.xIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  color: #94a3b8;
+}
+
+.inscriptionsCell {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.footerNote {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 1.5rem;
+}
