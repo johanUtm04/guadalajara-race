@@ -1,15 +1,33 @@
 import React, { useState } from 'react';
 import styles from './css/Header.module.css';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  logoUrl?: string;
+  logoAlt?: string;
+}
+
+export const Header: React.FC<HeaderProps> = ({ 
+  logoUrl, 
+  logoAlt = "3ª Carrera Cruz Azul Guadalajara 2026" 
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className={styles.appHeader}>
       <div className={styles.headerContainer}>
         <div className={styles.logoSection}>
-          <span className={styles.logoBadge}>CORPORACIÓN AZUL • CEMENTO CRUZ AZUL</span>
-          <h1 className={styles.logoTitle}>3ª CARRERA CRUZ AZUL GUADALAJARA 2026</h1>
+          {logoUrl ? (
+            <img 
+              src={logoUrl} 
+              alt={logoAlt} 
+              className={styles.logoImage} 
+            />
+          ) : (
+            <>
+              <span className={styles.logoBadge}>CORPORACIÓN AZUL • CEMENTO CRUZ AZUL</span>
+              <h1 className={styles.logoTitle}>3ª CARRERA CRUZ AZUL GUADALAJARA 2026</h1>
+            </>
+          )}
         </div>
 
         <button 

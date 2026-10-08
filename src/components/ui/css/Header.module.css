@@ -4,14 +4,15 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--color-dark-navy, #111a42);
-  border-bottom: 3px solid var(--color-accent-red, #e31b23);
-  padding: 1rem 3rem;
+  background-color: #0b132b; 
+  border-bottom: 2px solid #dc2626;
+  width: 100%;
 }
 
 .headerContainer {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +20,14 @@
 
 .logoSection {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.logoImage {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .logoBadge {
