@@ -6,12 +6,14 @@ import { LocationSection } from "./components/LocationSection/LocationSection";
 import { SocialCauseSection } from "./components/SocialCauseSection/SocialCauseSection";
 import { PrizesSection } from "./components/PrizesSection/PrizesSection";
 import { SponsorsTable } from "./components/SponsorsTable/SponsorsTable";
+
+import logoCruzAzul from './assets/header/logo-cruz-azul.png';
 import './App.css';
 
 export function App() {
   return (
     <div className="app-shell">
-      <Header />
+      <Header logoUrl={logoCruzAzul} logoAlt="Cemento Cruz Azul Logo" />
       <Hero eventDateIso="2026-11-15T07:00:00"/>
       <EventOverview />
       <RunnerKit />
