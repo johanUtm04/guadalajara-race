@@ -58,11 +58,6 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
 .iconWrapper {
   width: 3.5rem;
   height: 3.5rem;
@@ -91,4 +86,22 @@
   font-size: 0.875rem;
   color: #64748b;
   line-height: 1.5;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #f8fafc;
+}
+
+.itemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

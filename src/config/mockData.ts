@@ -6,24 +6,28 @@ export const MOCK_KIT_ITEMS: KitItem[] = [
     name: 'Playera Conmemorativa',
     description: 'Playera técnica de alta tecnología de secado rápido con el diseño oficial 2026.',
     iconName: 'shirt',
+    imageUrl: '/images/runner-kit/playera.png',
   },
   {
     id: 'kit-2',
     name: 'Número de Corredor',
     description: 'Número oficial personalizado con chip de cronometraje electrónico integrado.',
     iconName: 'tag',
+    imageUrl: '/images/runner-kit/numeroCorredor.png',
   },
   {
     id: 'kit-3',
     name: 'Medalla de Finalista',
     description: 'Medalla metálica de colección otorgada al cruzar la meta.',
     iconName: 'award',
+    imageUrl: '/images/runner-kit/medallaFinalista.png',
   },
   {
     id: 'kit-4',
     name: 'Morral Deportivo',
     description: 'Morral ligero e impermeable para resguardo de pertenencias.',
     iconName: 'bag',
+    imageUrl: '/images/runner-kit/morral.png',
   },
 ]
 

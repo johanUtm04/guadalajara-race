@@ -15,6 +15,7 @@ export interface KitItem{
   name: string;
   description: string;
   iconName: string;
+  imageUrl?: string;
 }
 
 export interface Prize {
