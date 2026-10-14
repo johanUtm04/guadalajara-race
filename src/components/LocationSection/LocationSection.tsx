@@ -3,6 +3,54 @@ import { MapPin, Car, ExternalLink, Info } from 'lucide-react';
 import { MOCK_LOCATION_DATA } from '../../config/mockData';
 import styles from './LocationSection.module.css';
 
+
+type ParkingImageProps = {
+  imageUrl?: string;
+  imageAlt?: string;
+  parkingName: string;
+};
+
+const ParkingImage = ({
+  imageUrl,
+  imageAlt,
+  parkingName,
+}: ParkingImageProps) => {
+  const [imageError, setImageError] = useState(false);
+
+  if (!imageUrl || imageError) {
+    return (
+      <div
+        className={styles.parkingImageFallback}
+        role="img"
+        aria-label={`Imagen no disponible para ${parkingName}`}
+      >
+        <Car
+          size={48}
+          className={styles.parkingImageIcon}
+          aria-hidden="true"
+        />
+        <span>Imagen no disponible</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.parkingImageWrapper}>
+      <img
+        src={imageUrl}
+        alt={imageAlt || parkingName}
+        className={styles.parkingImage}
+        loading="lazy"
+        onError={() => setImageError(true)}
+      />
+      <span className={styles.imageDisclaimer}>
+        Imagen ilustrativa
+      </span>
+    </div>
+  );
+};
+
+
 export const LocationSection: React.FC = () => {
   const [activeTabId, setActiveTabId] = useState<string>(
     MOCK_LOCATION_DATA.parkings[0].id
@@ -64,6 +112,12 @@ export const LocationSection: React.FC = () => {
             </div>
 
             <div className={styles.tabContent}>
+              <ParkingImage
+                key={activeParking.id}
+                imageUrl={activeParking.imageUrl}
+                imageAlt={activeParking.imageAlt}
+                parkingName={activeParking.name}
+              />
               <h4 className={styles.parkingTitle}>{activeParking.name}</h4>
               <div className={styles.infoBadge}>
                 <Info size={16} />
