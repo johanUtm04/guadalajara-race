@@ -263,3 +263,36 @@ export const MOCK_SPONSORS_DATA: SponsorsSectionData = {
     },
   ],
 };
+
+
+export interface AwardCarouselItem {
+  id: string;
+  title: string;
+  place: string;
+  imageUrl: string;
+  alt: string;
+}
+
+export const MOCK_AWARDS_CAROUSEL: AwardCarouselItem[] = [
+  {
+    id: 'award-1',
+    title: 'Motocicleta',
+    place: '1er Lugar',
+    imageUrl: '/images/awards/motocicleta.png',
+    alt: 'Imagen ilustrativa de motocicleta, premio de primer lugar',
+  },
+  {
+    id: 'award-2',
+    title: 'Scooter Eléctrico',
+    place: '2do Lugar',
+    imageUrl: '/images/awards/scooter.png',
+    alt: 'Imagen ilustrativa de scooter eléctrico, premio de segundo lugar',
+  },
+  {
+    id: 'award-3',
+    title: 'Pantalla Smart TV',
+    place: '3er Lugar',
+    imageUrl: '/images/awards/pantalla.png',
+    alt: 'Imagen ilustrativa de pantalla Smart TV, premio de tercer lugar',
+  },
+];
