@@ -6,6 +6,7 @@ import { LocationSection } from "./components/LocationSection/LocationSection";
 import { SocialCauseSection } from "./components/SocialCauseSection/SocialCauseSection";
 import { PrizesSection } from "./components/PrizesSection/PrizesSection";
 import { SponsorsTable } from "./components/SponsorsTable/SponsorsTable";
+import { Footer } from './components/Footer/Footer';
 
 import logoCruzAzul from './assets/header/logo-cruz-azul.png';
 import './App.css';
@@ -21,10 +22,7 @@ export function App() {
       <SocialCauseSection />
       <PrizesSection />
       <SponsorsTable />
-      {/* <main className="main-content">
-        <h2>Bienvenido a la 3ª Carrera Cruz Azul Guadalajara 2026</h2>
-        <p>Selecciona una sección en la navegación superior para explorar los detalles del evento.</p>
-      </main> */}
+      <Footer />
     </div>
   );
 }
