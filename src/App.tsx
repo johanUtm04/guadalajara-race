@@ -15,7 +15,9 @@ export function App() {
   return (
     <div className="app-shell">
       <Header logoUrl={logoCruzAzul} logoAlt="Cemento Cruz Azul Logo" />
-      <Hero eventDateIso="2026-11-15T07:00:00"/>
+      <div id="inicio">
+        <Hero eventDateIso="2026-11-15T07:00:00" />
+      </div>
       <EventOverview />
       <RunnerKit />
       <LocationSection />
